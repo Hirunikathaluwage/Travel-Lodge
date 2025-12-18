@@ -78,7 +78,7 @@ const Login = () => {
           <div className="text-center text-sm text-gray-600 pt-4">
             New here?{" "}
             <a
-              href="#"
+              href="/Signup"
               className="text-blue-600 hover:text-blue-700 font-semibold"
             >
               Create an account
