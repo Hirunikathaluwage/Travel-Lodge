@@ -1,5 +1,5 @@
 import User from "../models/User.js";
-import bycript from "bcryptjs";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 export const login = async(req,res)=> {
@@ -10,7 +10,7 @@ export const login = async(req,res)=> {
         return res.status(401).json({message:"Invalid credentials"});
     }
 
-    const isMatch = await bycript.compare(password,User.password);
+    const isMatch = await bcrypt.compare(password,user.password);
     if(!isMatch){
         return res.status(401).json({message:"Invalid credentials"});
     }
