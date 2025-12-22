@@ -12,27 +12,25 @@ const Login = () => {
 
   return (
     <div
-      className="relative min-h-screen w-full flex items-center justify-center lg:justify-end px-4 sm:px-6 lg:px-180 pt-3 pb-12"
+      className="relative min-h-screen w-full flex items-center justify-center lg:justify-center px-4 sm:px-6 lg:px-16 py-6"
       style={{
         backgroundImage:
           "url('https://images.unsplash.com/photo-1506059612708-99d6c258160e?q=80&w=2069&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "left center",
+        backgroundPosition: "center",
       }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Login Form Container */}
-      <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-8 sm:p-10 w-full max-w-md">
-        <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900 mb-6">
+      <div className="relative z-10 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-6 sm:p-8 w-full max-w-md">
+        <div className="mb-6 text-center sm:text-left">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
             Travel Lodge
           </h1>
-          <p className="text-gray-600 text-m text-center">
-            Sign in to continue
-          </p>
+          <p className="text-gray-600 text-m">Sign in to continue</p>
         </div>
 
         <div className="space-y-4">
