@@ -18,10 +18,33 @@ const Signup = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Account created successfully!");
+
+    try {
+      const res = await fetch("http://localhost:5000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: formData.Username,
+          password: formData.password,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        alert(data.message || "Registration failed");
+        return;
+      }
+
+      alert("Account created successfully!");
+    } catch (error) {
+      console.error("Registration error:", error);
+      alert("Something went wrong!");
+    }
   };
 
   return (
@@ -156,7 +179,10 @@ const Signup = () => {
 
         <p className="text-center text-sm text-gray-600 mt-6">
           Already have an account?{" "}
-          <a href="#" className="text-indigo-600 font-semibold hover:underline">
+          <a
+            href="/Login"
+            className="text-indigo-600 font-semibold hover:underline"
+          >
             Sign In
           </a>
         </p>

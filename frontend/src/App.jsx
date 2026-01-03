@@ -9,14 +9,16 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path="/login"
           element={
             <MainLayout>
               <Login />
             </MainLayout>
           }
         />
+
         <Route />
+
         <Route
           path="/signup"
           element={
