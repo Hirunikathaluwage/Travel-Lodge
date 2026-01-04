@@ -1,22 +1,9 @@
-import bcrypt from "bcryptjs";
-import User from "../models/User.js";
+import express from "express";
+import { register, login } from "../controllers/authController.js";
 
-export const register = async (req, res) => {
-  const { username, password } = req.body;
+const router = express.Router();
 
-  const existingUser = await User.findOne({ username });
-  if (existingUser) {
-    return res.status(400).json({ message: "User already exists" });
-  }
+router.post("/register", register);
+router.post("/login", login);
 
-  const hashedPassword = await bcrypt.hash(password, 10);
-
-  await User.create({
-    username,
-    password: hashedPassword, 
-  });
-
-  res.status(201).json({ message: "User created successfully" });
-};
-
-export default register;
+export default router;

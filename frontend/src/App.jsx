@@ -1,13 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import MainLayout from "./layouts/MainLayout";
 import "./App.css";
-import Signup from "./pages/Signup";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Redirect root to /login */}
+        <Route path="/" element={<Navigate to="/login" />} />
+
         <Route
           path="/login"
           element={
@@ -17,8 +20,6 @@ function App() {
           }
         />
 
-        <Route />
-
         <Route
           path="/signup"
           element={
@@ -27,7 +28,6 @@ function App() {
             </MainLayout>
           }
         />
-        <Route />
       </Routes>
     </BrowserRouter>
   );
