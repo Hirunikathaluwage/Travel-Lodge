@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="w-full bg-white border-t border-gray-200 text-black">
+    <footer className="w-full bg-gray-200 border-t border-gray-200 text-black">
       {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-8 pt-6 pb-14 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand */}
