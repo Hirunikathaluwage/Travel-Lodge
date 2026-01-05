@@ -105,7 +105,7 @@ const HomePage = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/150 to-black/70"></div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in">
@@ -163,14 +163,14 @@ const HomePage = () => {
               <div className="flex items-end">
                 <button
                   onClick={handleSearch}
-                  className="w-full bg-gradient-to-r from-indigo-600 to-indigo-800 text-white py-3 rounded-lg font-bold text-lg hover:from-indigo-700 hover:to-indigo-900 transition-all shadow-lg transform hover:scale-105"
+                  className="w-full bg-gradient-to-r black text-white py-3 rounded-lg  hover:text-indigo-700 font-bold text-lg transition-all shadow-lg transform hover:scale-105"
                 >
                   Search
                 </button>
               </div>
             </div>
 
-            <button className="text-indigo-600 font-semibold hover:text-indigo-700 transition mt-4">
+            <button className="text-white-600 font-semibold hover:text-indigo-700 transition mt-4">
               Explore Tours →
             </button>
           </div>
@@ -178,17 +178,17 @@ const HomePage = () => {
       </section>
 
       {/* Hotel Overview Carousel */}
-      <section className="py-24 bg-gray-400">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-gradient-to-b from-gray-500 via-gray-300 to-gray-700">
+        <div className="max-w-8xl mx-auto px-9">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
               Discover Our Paradise
             </h2>
-            <p className="text-2xl text-gray-600">Where luxury meets comfort</p>
+            <p className="text-2xl text-gray-700">Where luxury meets comfort</p>
           </div>
 
           {/* Carousel */}
-          <div className="relative h-[550px] rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative h-[650px] rounded-3xl overflow-hidden shadow-2xl">
             <div className="relative w-full h-full">
               {hotelImages.map((image, index) => (
                 <div
@@ -276,10 +276,21 @@ const HomePage = () => {
       </section>
 
       {/* Reviews Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section
+        className="relative py-24"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-700/40 via-gray-400/48 to-gray-900/60"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-gray-100 px-8 py-4 rounded-full mb-6 border border-gray-200">
+            <div className="inline-flex items-center bg-white/80 backdrop-blur-md px-8 py-4 rounded-full mb-6 border border-gray-300 shadow-lg">
               <div className="flex text-yellow-400 text-3xl mr-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i}>★</span>
@@ -290,7 +301,7 @@ const HomePage = () => {
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
               Guest Experiences
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-900">
               Hear from travelers who've stayed with us
             </p>
           </div>
@@ -299,7 +310,7 @@ const HomePage = () => {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                className="bg-white/75 backdrop-blur-xl p-8 rounded-2xl border border-gray-200 shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:bg-white/85"
               >
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex items-center">
@@ -310,7 +321,7 @@ const HomePage = () => {
                       <h4 className="text-gray-900 font-bold text-lg">
                         {review.name}
                       </h4>
-                      <p className="text-gray-500 text-sm">{review.location}</p>
+                      <p className="text-gray-600 text-sm">{review.location}</p>
                     </div>
                   </div>
                 </div>
@@ -321,10 +332,10 @@ const HomePage = () => {
                       <span key={i}>★</span>
                     ))}
                   </div>
-                  <span className="text-gray-500 text-sm">{review.date}</span>
+                  <span className="text-gray-600 text-sm">{review.date}</span>
                 </div>
 
-                <p className="text-gray-700 leading-relaxed text-base">
+                <p className="text-gray-800 leading-relaxed text-base">
                   {review.comment}
                 </p>
               </div>
@@ -332,7 +343,7 @@ const HomePage = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-500 text-lg">
+            <p className="text-gray-00 text-lg font-medium">
               Based on 2,847 verified reviews
             </p>
           </div>
@@ -340,16 +351,16 @@ const HomePage = () => {
       </section>
 
       {/* Experiences Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gradient-to-b from-gray-200 via-gray-00 to-gray-600/80">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12">
-            <p className="text-indigo-600 font-semibold text-sm uppercase tracking-wide mb-2">
+            <p className="text-indigo-600 font-semibold text-l uppercase tracking-wide mb-2">
               EXPERIENCES
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Unforgettable Stay, Exceptional Experiences
             </h2>
-            <p className="text-lg text-gray-600 max-w-4xl">
+            <p className="text-lg text-gray-700 max-w-4xl">
               Dive into a world of endless possibilities. Whether you're lacing
               up your tennis shoes, exploring our lush surroundings, or setting
               sail on a sunset cruise, the adventure never ends at Travel Lodge.
@@ -369,18 +380,18 @@ const HomePage = () => {
               }}
             ></div>
 
-            <div className="bg-white p-10 rounded-2xl shadow-lg">
+            <div className="bg-white/80 backdrop-blur-sm border border-gray-300 p-10 rounded-2xl shadow-lg">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 Explore Local Culture: Guided City Tours
               </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-700 mb-6 leading-relaxed">
                 Your journey begins with our expert guides taking you through
                 the city's most iconic landmarks, hidden gems, and vibrant local
                 markets. Experience authentic cuisine, meet local artisans, and
                 immerse yourself in the rich cultural tapestry that makes our
                 destination truly special.
               </p>
-              <button className="border-2 border-gray-900 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-all inline-flex items-center">
+              <button className="border-2 border-indigo-600 text-white-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-all inline-flex items-center">
                 Explore more
                 <svg
                   className="w-5 h-5 ml-2"
