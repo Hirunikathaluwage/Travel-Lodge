@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../components/Header";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -44,6 +45,7 @@ const Login = () => {
         backgroundPosition: "center",
       }}
     >
+      <Header />
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
