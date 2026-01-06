@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -13,36 +14,38 @@ const Header = () => {
         </div>
 
         <nav className="hidden md:flex items-center space-x-8 ">
-          <a
-            href="#rooms"
-            className="text-white hover:text-indigo-300 transition font-medium "
+          <Link
+            to="/"
+            className="text-white hover:text-indigo-300 transition font-medium"
           >
-            Rooms
-          </a>
+            Home
+          </Link>
           <a
             href="#dining"
             className="text-white hover:text-indigo-300 transition font-medium"
           >
             Dining
           </a>
-          <a
-            href="#spa"
+          <Link
+            to="/AboutUs"
             className="text-white hover:text-indigo-300 transition font-medium"
           >
-            Spa & Wellness
-          </a>
+            Rooms
+          </Link>
           <a
             href="#events"
             className="text-white hover:text-indigo-300 transition font-medium"
           >
             Events
           </a>
-          <a
-            href="#about"
+
+          <Link
+            to="/AboutUs"
             className="text-white hover:text-indigo-300 transition font-medium"
           >
             About Us
-          </a>
+          </Link>
+
           <a
             href="#contact"
             className="text-white hover:text-indigo-300 transition font-medium"

@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
+import AboutUs from "./pages/AboutUs";
 import "./App.css";
 
 function App() {
@@ -32,6 +33,15 @@ function App() {
           element={
             <MainLayout>
               <Signup />
+            </MainLayout>
+          }
+        />
+
+        <Route
+          path="/aboutUs"
+          element={
+            <MainLayout>
+              <AboutUs />
             </MainLayout>
           }
         />
