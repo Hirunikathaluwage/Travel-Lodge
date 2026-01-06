@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../components/Header";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +50,7 @@ const Signup = () => {
 
   return (
     <div
-      className="relative min-h-screen flex items-center justify-center p-4"
+      className="relative min-h-screen flex flex-col items-center p-34"
       style={{
         backgroundImage:
           "url('https://images.unsplash.com/photo-1709809328185-ba9ee5a06121?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
@@ -58,16 +59,17 @@ const Signup = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <Header />
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-black/35"></div>
 
       {/* Signup Card */}
-      <div className="relative z-10 bg-white rounded-2xl shadow-2xl w-full max-w-md p-8">
+      <div className="relative z-10 bg-white rounded-2xl shadow-2xl w-full max-w-md p-6">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-indigo-900 mb-2">
+          <h1 className="text-3xl font-bold text-indigo-900 mb-1">
             Travel Lodge
           </h1>
-          <p className="text-gray-600">Create your account</p>
+          <p className="text-gray-600 p-1">Create your account</p>
         </div>
 
         <form className="space-y-4" onSubmit={handleSubmit}>

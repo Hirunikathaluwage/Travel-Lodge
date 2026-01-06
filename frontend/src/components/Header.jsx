@@ -1,17 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black to-transparent">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
         <div className="flex items-center">
           <h1 className="text-2xl font-bold text-white tracking-wide">
             Travel Lodge
           </h1>
         </div>
 
-        {/* Navigation Menu */}
         <nav className="hidden md:flex items-center space-x-8 ">
           <a
             href="#rooms"
@@ -49,7 +49,11 @@ const Header = () => {
           >
             Contact
           </a>
-          <button className=" text-white px-6 py-2 rounded-lg transition font-medium">
+
+          <button
+            onClick={() => navigate("/Login")}
+            className="text-white px-6 py-2 rounded-lg transition font-medium"
+          >
             Sign In
           </button>
         </nav>
