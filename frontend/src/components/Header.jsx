@@ -13,49 +13,35 @@ const Header = () => {
           </h1>
         </div>
 
-        <nav className="hidden md:flex items-center space-x-8 ">
-          <Link
-            to="/"
-            className="text-white hover:text-indigo-300 transition font-medium"
-          >
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link to="/" className="text-white hover:text-indigo-300 font-medium">
             Home
           </Link>
-          <a
-            href="#dining"
-            className="text-white hover:text-indigo-300 transition font-medium"
-          >
-            Dining
-          </a>
+
           <Link
-            to="/AboutUs"
-            className="text-white hover:text-indigo-300 transition font-medium"
+            to="/rooms"
+            className="text-white hover:text-indigo-300 font-medium"
           >
             Rooms
           </Link>
-          <a
-            href="#events"
-            className="text-white hover:text-indigo-300 transition font-medium"
-          >
-            Events
-          </a>
 
           <Link
-            to="/AboutUs"
-            className="text-white hover:text-indigo-300 transition font-medium"
+            to="/aboutUs"
+            className="text-white hover:text-indigo-300 font-medium"
           >
             About Us
           </Link>
 
-          <a
-            href="#contact"
-            className="text-white hover:text-indigo-300 transition font-medium"
+          <Link
+            to="/contactUs"
+            className="text-white hover:text-indigo-300 font-medium"
           >
             Contact
-          </a>
+          </Link>
 
           <button
-            onClick={() => navigate("/Login")}
-            className="text-white px-6 py-2 rounded-lg transition font-medium"
+            onClick={() => navigate("/login")}
+            className="text-white px-6 py-2 rounded-lg font-medium"
           >
             Sign In
           </button>
