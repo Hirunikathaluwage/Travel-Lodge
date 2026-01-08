@@ -4,6 +4,7 @@ import Signup from "./pages/Signup";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/Contact";
 import "./App.css";
 
 function App() {
@@ -42,6 +43,15 @@ function App() {
           element={
             <MainLayout>
               <AboutUs />
+            </MainLayout>
+          }
+        />
+
+        <Route
+          path="/contactUs"
+          element={
+            <MainLayout>
+              <ContactUs />
             </MainLayout>
           }
         />
