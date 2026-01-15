@@ -5,6 +5,7 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/Contact";
+import RoomsPage from "./pages/Rooms";
 import "./App.css";
 
 function App() {
@@ -19,7 +20,6 @@ function App() {
             </MainLayout>
           }
         />
-
         <Route
           path="/login"
           element={
@@ -28,7 +28,6 @@ function App() {
             </MainLayout>
           }
         />
-
         <Route
           path="/signup"
           element={
@@ -37,7 +36,6 @@ function App() {
             </MainLayout>
           }
         />
-
         <Route
           path="/aboutUs"
           element={
@@ -46,12 +44,20 @@ function App() {
             </MainLayout>
           }
         />
-
         <Route
           path="/contactUs"
           element={
             <MainLayout>
               <ContactUs />
+            </MainLayout>
+          }
+        />
+
+        <Route
+          path="/rooms"
+          element={
+            <MainLayout>
+              <RoomsPage />
             </MainLayout>
           }
         />
