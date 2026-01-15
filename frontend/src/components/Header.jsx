@@ -26,6 +26,20 @@ const Header = () => {
           </Link>
 
           <Link
+            to="/contactUs"
+            className="text-white hover:text-indigo-300 font-medium"
+          >
+            Gallery
+          </Link>
+
+          <Link
+            to="/dinning"
+            className="text-white hover:text-indigo-300 font-medium"
+          >
+            Dinning
+          </Link>
+
+          <Link
             to="/aboutUs"
             className="text-white hover:text-indigo-300 font-medium"
           >
