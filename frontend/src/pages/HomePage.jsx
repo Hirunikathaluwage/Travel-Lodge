@@ -9,14 +9,14 @@ const HomePage = () => {
 
   const hotelImages = [
     {
-      url: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Luxury Suites",
       description:
         "Experience ultimate comfort in our elegantly designed rooms featuring king-sized beds, premium linens, and panoramic city views. Each suite is equipped with modern amenities including smart TVs, high-speed WiFi, and marble bathrooms with rainfall showers.",
     },
     {
-      url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80",
-      title: "Infinity Pool & Spa",
+      url: "https://images.unsplash.com/photo-1727994964977-137247f19086?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Infinity Pool ",
       description:
         "Dive into luxury at our temperature-controlled infinity pool overlooking stunning vistas. Our full-service spa offers rejuvenating treatments, sauna, steam room, and a state-of-the-art fitness center available 24/7 for your wellness needs.",
     },
