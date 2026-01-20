@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 
 const HomePage = () => {
-  const [checkIn, setCheckIn] = useState("");
-  const [checkOut, setCheckOut] = useState("");
-  const [guests, setGuests] = useState(1);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const hotelImages = [
@@ -15,8 +12,8 @@ const HomePage = () => {
         "Experience ultimate comfort in our elegantly designed rooms featuring king-sized beds, premium linens, and panoramic city views. Each suite is equipped with modern amenities including smart TVs, high-speed WiFi, and marble bathrooms with rainfall showers.",
     },
     {
-      url: "https://images.unsplash.com/photo-1727994964977-137247f19086?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Infinity Pool ",
+      url: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80",
+      title: "Infinity Pool",
       description:
         "Dive into luxury at our temperature-controlled infinity pool overlooking stunning vistas. Our full-service spa offers rejuvenating treatments, sauna, steam room, and a state-of-the-art fitness center available 24/7 for your wellness needs.",
     },
@@ -33,36 +30,36 @@ const HomePage = () => {
         "Step into elegance in our magnificent lobby adorned with contemporary art and designer furniture. Enjoy afternoon tea in our sophisticated lounge bar, featuring craft cocktails, fine wines, and live music performances on weekends.",
     },
     {
-      url: "https://images.unsplash.com/photo-1519167758481-83f29da8fd14?auto=format&fit=crop&q=80",
-      title: "Event & Conference Facilities",
+      url: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&q=80",
+      title: "Water Sports & Adventures",
       description:
-        "Host your perfect event in our versatile spaces accommodating 10 to 500 guests. Featuring cutting-edge audio-visual technology, customizable layouts, and dedicated event planners to ensure your meetings, weddings, or celebrations are flawlessly executed.",
+        "Experience the thrill of ocean adventures with our comprehensive water sports center. From surfing and snorkeling to jet skiing and sunset sailing, explore the vibrant marine life and crystal-clear waters of Sri Lanka's beautiful coastline.",
     },
   ];
 
   const reviews = [
     {
-      name: "Sarah Mitchell",
+      name: "Anna Müller",
       rating: 5,
       comment:
-        "Absolutely stunning! The service was impeccable and the views were breathtaking. Every detail was perfect from check-in to check-out.",
-      location: "New York, USA",
+        "An amazing beachside stay in Sri Lanka! Waking up to the sound of waves and watching the sunset from our balcony was unforgettable. The staff were warm, welcoming, and always smiling.",
+      location: "Berlin, Germany",
       date: "December 2024",
     },
     {
-      name: "James Rodriguez",
+      name: "Rohan Perera",
       rating: 5,
       comment:
-        "Best hotel experience ever. The attention to detail is remarkable and the staff went above and beyond to make our stay memorable.",
-      location: "London, UK",
+        "One of the best beach hotels I’ve stayed at locally. Clean rooms, great food, and direct access to the beach. Perfect place to relax with family or friends.",
+      location: "Colombo, Sri Lanka",
       date: "November 2024",
     },
     {
-      name: "Emily Chen",
+      name: "Isabella Rossi",
       rating: 5,
       comment:
-        "A true paradise! The rooms are luxurious, staff incredibly friendly, and the amenities exceeded all expectations. Will definitely return!",
-      location: "Singapore",
+        "This place truly captures the beauty of Sri Lanka. Stunning ocean views, fresh seafood, and incredibly friendly staff. Felt safe, peaceful, and well taken care of throughout our stay.",
+      location: "Milan, Italy",
       date: "December 2024",
     },
   ];
@@ -73,13 +70,6 @@ const HomePage = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
-
-  const handleSearch = () => {
-    console.log("Search:", { checkIn, checkOut, guests });
-    alert(
-      `Searching for rooms\nCheck-in: ${checkIn}\nCheck-out: ${checkOut}\nGuests: ${guests}`
-    );
-  };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % hotelImages.length);
@@ -105,7 +95,7 @@ const HomePage = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/150 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/70"></div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in">
@@ -115,65 +105,6 @@ const HomePage = () => {
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto">
             Book rooms, explore tours, and manage your stay effortlessly
           </p>
-
-          {/* Search Card */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto transform hover:scale-105 transition-transform duration-300">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
-              <div className="text-left">
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Check-in
-                </label>
-                <input
-                  type="date"
-                  value={checkIn}
-                  onChange={(e) => setCheckIn(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700"
-                />
-              </div>
-
-              <div className="text-left">
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Check-out
-                </label>
-                <input
-                  type="date"
-                  value={checkOut}
-                  onChange={(e) => setCheckOut(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700"
-                />
-              </div>
-
-              <div className="text-left">
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Guests
-                </label>
-                <select
-                  value={guests}
-                  onChange={(e) => setGuests(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700"
-                >
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
-                    <option key={num} value={num}>
-                      {num} {num === 1 ? "Guest" : "Guests"}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="flex items-end">
-                <button
-                  onClick={handleSearch}
-                  className="w-full bg-gradient-to-r black text-white py-3 rounded-lg  hover:text-indigo-700 font-bold text-lg transition-all shadow-lg transform hover:scale-105"
-                >
-                  Search
-                </button>
-              </div>
-            </div>
-
-            <button className="text-white-600 font-semibold hover:text-indigo-700 transition mt-4">
-              Explore Tours →
-            </button>
-          </div>
         </div>
       </section>
 
@@ -301,9 +232,6 @@ const HomePage = () => {
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
               Guest Experiences
             </h2>
-            <p className="text-xl text-gray-900">
-              Hear from travelers who've stayed with us
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -342,30 +270,25 @@ const HomePage = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-gray-00 text-lg font-medium">
-              Based on 2,847 verified reviews
-            </p>
-          </div>
+          <div className="text-center mt-12"></div>
         </div>
       </section>
 
       {/* Experiences Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-200 via-gray-00 to-gray-600/80">
+      <section className="py-24 bg-gradient-to-b from-gray-300 via-gray-300 to-gray-600/80">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12">
-            <p className="text-indigo-600 font-semibold text-l uppercase tracking-wide mb-2">
+            <p className="text-indigo-600 font-semibold text-sm uppercase tracking-wide mb-2">
               EXPERIENCES
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Unforgettable Stay, Exceptional Experiences
+              Beachside Living, Authentic Sri Lankan Experiences
             </h2>
             <p className="text-lg text-gray-700 max-w-4xl">
-              Dive into a world of endless possibilities. Whether you're lacing
-              up your tennis shoes, exploring our lush surroundings, or setting
-              sail on a sunset cruise, the adventure never ends at Travel Lodge.
-              We offer thrilling on-site activities and curated excursions -
-              we've got something for everyone.
+              Experience the rhythm of the ocean and the warmth of Sri Lankan
+              hospitality. From peaceful mornings by the beach to cultural
+              discoveries and ocean adventures, every moment is designed to help
+              you slow down, explore, and truly connect with nature.
             </p>
           </div>
 
@@ -374,7 +297,7 @@ const HomePage = () => {
               className="h-96 rounded-2xl shadow-xl"
               style={{
                 backgroundImage:
-                  "url(https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80)",
+                  "url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -382,16 +305,16 @@ const HomePage = () => {
 
             <div className="bg-white/80 backdrop-blur-sm border border-gray-300 p-10 rounded-2xl shadow-lg">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Explore Local Culture: Guided City Tours
+                Discover the Coast: Culture, Nature & Ocean Life
               </h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Your journey begins with our expert guides taking you through
-                the city's most iconic landmarks, hidden gems, and vibrant local
-                markets. Experience authentic cuisine, meet local artisans, and
-                immerse yourself in the rich cultural tapestry that makes our
-                destination truly special.
+                Explore nearby fishing villages, golden beaches, and historic
+                coastal towns with the help of local guides. Enjoy whale
+                watching, snorkeling, sunset beach walks, and authentic Sri
+                Lankan cuisine prepared with fresh local ingredients — all just
+                steps away from your stay.
               </p>
-              <button className="border-2 border-indigo-600 text-white-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-all inline-flex items-center">
+              <button className="border-2 border-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-all inline-flex items-center">
                 Explore more
                 <svg
                   className="w-5 h-5 ml-2"
