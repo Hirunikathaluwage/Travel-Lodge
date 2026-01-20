@@ -14,148 +14,146 @@ const RoomsPage = () => {
   const rooms = [
     {
       id: 1,
-      name: "Hill View Deluxe Room",
+      name: "Ocean View Deluxe Room",
       image:
-        "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80",
+        "https://assets.avanihotels.com/image/upload/q_auto,f_auto,c_limit,w_1045/media/minor/avani/images/kalutara/sleeping/avani-new-images/teaser-590x354/avani_deluxe_lagoon_view_room_590x354.jpg",
       shortDescription:
-        "Elegant room with breathtaking views of misty mountains and tea estates",
-      price: 180,
+        "Elegant room with stunning views of the Indian Ocean and golden sunsets",
+      price: 190,
       availability: "Available",
       roomType: "Deluxe Room",
-      size: "40 m²",
+      size: "42 m²",
       capacity: 2,
       bedType: "King Size Bed",
       amenities: [
         "Free WiFi",
-        "Balcony with Mountain View",
-        "Ceiling Fan",
+        "Private Balcony with Sea View",
+        "Air Conditioning",
         "Hot Water",
         "Tea & Coffee Facilities",
-        "Wooden Furnishings",
-        "Work Desk",
+        "Mini Fridge",
       ],
       fullDescription:
-        "Wake up to cool mountain air and sweeping views of lush tea plantations. This hill-view deluxe room blends modern comfort with traditional Sri Lankan design, featuring warm wooden interiors, a private balcony, and a peaceful atmosphere ideal for relaxation.",
+        "Wake up to the sound of waves and breathtaking ocean views. This deluxe room blends modern comfort with tropical coastal design, offering a private balcony perfect for enjoying sunsets over the Indian Ocean.",
     },
     {
       id: 2,
-      name: "Tea Estate View Room",
+      name: "Garden View Beach Room",
       image:
-        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80",
+        "https://assets.avanihotels.com/image/upload/q_auto,f_auto,c_limit,w_1045/media/minor/avani/images/kalutara/sleeping/avani-new-images/teaser-590x354/avani_kalutara_resort_guest_room_avani_ocean_view_room_balcony-590-345.jpg",
       shortDescription:
-        "Comfortable room overlooking rolling tea gardens and valleys",
+        "Comfortable room surrounded by lush tropical gardens near the beach",
       price: 160,
       availability: "Available",
       roomType: "Standard Room",
-      size: "32 m²",
+      size: "34 m²",
       capacity: 2,
       bedType: "Queen Size Bed",
       amenities: [
         "Free WiFi",
-        "Tea Estate View",
+        "Garden View",
+        "Air Conditioning",
         "Hot Water",
         "Tea Maker",
-        "Ceiling Fan",
-        "Natural Ventilation",
+        "Private Terrace",
       ],
       fullDescription:
-        "Surrounded by endless green tea fields, this cozy room offers a serene hill-country experience. Ideal for couples or solo travelers seeking calm, nature, and authentic Sri Lankan hospitality.",
+        "Nestled among palm trees and tropical greenery, this room offers a peaceful coastal escape. Ideal for guests who enjoy nature, comfort, and easy access to the beach.",
     },
     {
       id: 3,
-      name: "Mountain Family Suite",
+      name: "Beachfront Family Suite",
       image:
-        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80",
       shortDescription:
-        "Spacious suite perfect for families, surrounded by mountain views",
-      price: 260,
+        "Spacious suite perfect for families with direct beach access",
+      price: 280,
       availability: "Available",
       roomType: "Family Suite",
-      size: "60 m²",
+      size: "65 m²",
       capacity: 5,
       bedType: "King Bed + Twin Beds",
       amenities: [
         "Free WiFi",
+        "Direct Beach Access",
         "Private Balcony",
         "Separate Living Area",
-        "Hot Water",
-        "Dining Space",
+        "Air Conditioning",
         "Tea & Coffee Facilities",
-        "Extra Storage",
       ],
       fullDescription:
-        "Designed for families, this spacious suite provides comfort, privacy, and stunning hill views. Enjoy cool evenings on the balcony while surrounded by the peaceful beauty of Sri Lanka’s central highlands.",
+        "Designed for families, this beachfront suite offers space, comfort, and stunning ocean views. Step directly onto the beach and enjoy unforgettable moments with your loved ones.",
     },
     {
       id: 4,
-      name: "Private Hill Cottage",
+      name: "Private Beach Villa",
       image:
         "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80",
       shortDescription:
-        "Standalone cottage offering privacy amidst nature and fresh mountain air",
-      price: 300,
+        "Luxury standalone villa offering privacy steps away from the ocean",
+      price: 320,
       availability: "Limited",
       roomType: "Villa",
-      size: "55 m²",
+      size: "58 m²",
       capacity: 3,
       bedType: "King Size Bed",
       amenities: [
         "Free WiFi",
         "Private Garden",
         "Outdoor Seating Area",
-        "Fireplace (on request)",
-        "Hot Water",
+        "Ocean View",
+        "Air Conditioning",
         "Tea & Coffee Facilities",
       ],
       fullDescription:
-        "Hidden among trees and misty hills, this private cottage is ideal for couples seeking a quiet retreat. Enjoy unmatched privacy, cool climate, and a deep connection with nature in the heart of the hill country.",
+        "Perfect for couples seeking privacy and luxury, this beach villa is surrounded by tropical beauty. Enjoy peaceful mornings, ocean breezes, and romantic evenings by the shore.",
     },
     {
       id: 5,
-      name: "Budget Hill Country Room",
+      name: "Budget Coastal Room",
       image:
         "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80",
       shortDescription:
-        "Simple and comfortable room for travelers exploring the highlands",
-      price: 120,
+        "Simple and comfortable room for beach-loving travelers",
+      price: 130,
       availability: "Available",
       roomType: "Standard Room",
-      size: "25 m²",
+      size: "26 m²",
       capacity: 2,
       bedType: "Double Bed",
       amenities: [
         "Free WiFi",
+        "Air Conditioning",
         "Hot Water",
         "Ceiling Fan",
-        "Natural Lighting",
         "Tea Maker",
       ],
       fullDescription:
-        "A budget-friendly option for travelers who spend their days exploring waterfalls, hiking trails, and tea estates. Clean, simple, and comfortable with all essential amenities.",
+        "An affordable option for guests who spend their days exploring beaches, surfing, and coastal towns. Clean, comfortable, and equipped with all essential amenities.",
     },
     {
       id: 6,
-      name: "Honeymoon Mountain Suite",
+      name: "Honeymoon Ocean Suite",
       image:
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80",
       shortDescription:
-        "Romantic suite with panoramic mountain views and cozy interiors",
-      price: 280,
+        "Romantic suite with panoramic ocean views and tropical interiors",
+      price: 290,
       availability: "Available",
       roomType: "Suite",
-      size: "50 m²",
+      size: "52 m²",
       capacity: 2,
       bedType: "King Size Bed",
       amenities: [
         "Free WiFi",
         "Private Balcony",
-        "Mountain View",
-        "Decorated Room on Request",
-        "Hot Water",
+        "Ocean View",
+        "Romantic Room Setup on Request",
+        "Air Conditioning",
         "Tea & Coffee Facilities",
       ],
       fullDescription:
-        "Perfect for honeymooners, this romantic suite offers panoramic views of mist-covered mountains, warm lighting, and a calm atmosphere designed for unforgettable moments in Sri Lanka’s hill country.",
+        "Designed especially for honeymooners, this oceanfront suite offers breathtaking sea views, soft lighting, and a tranquil atmosphere for unforgettable romantic moments by the Sri Lankan coast.",
     },
   ];
 
@@ -195,19 +193,20 @@ const RoomsPage = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-800/30 via-gray-400 to-blue-800/40">
+    <div className="min-h-screen bg-gradient-to-b from-blue-900/30 via-gray-400 to-blue-800/40">
       <Header />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-400 mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             OUR ROOMS
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Discover your perfect retreat. From cozy standard rooms to lavish
-            suites, each accommodation is designed to provide comfort, luxury,
-            and unforgettable experiences.
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
+            Wake up to ocean breezes and golden sunsets. From cozy seaside rooms
+            to luxurious oceanfront suites, each space is designed to offer
+            comfort, relaxation, and an unforgettable stay along Sri Lanka’s
+            beautiful coastline.
           </p>
         </div>
       </section>

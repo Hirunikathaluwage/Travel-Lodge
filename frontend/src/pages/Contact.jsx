@@ -20,24 +20,26 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Thank you for contacting us! We will get back to you soon.");
+    alert(
+      "Thank you for reaching out! Our beachside team will contact you shortly."
+    );
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-900/30 via-gray-400 to-blue-800/40">
+    <div className="min-h-screen bg-gradient-to-b from-blue-900/30 via-gray-500 to-blue-800/40">
       <Header />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-300 mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             CONTACT US
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            We'd love to hear from you! Whether you have a question about our
-            services, need assistance with your booking, or just want to say
-            hello, our team is here to help.
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
+            Whether you’re planning a relaxing beach escape, a romantic getaway,
+            or a tropical adventure, our team is here to help make your stay by
+            the Sri Lankan coast truly unforgettable.
           </p>
         </div>
       </section>
@@ -64,8 +66,8 @@ const ContactUs = () => {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Call Us</h3>
-              <p className="text-gray-700 mb-2 text-lg">+1 (555) 123-4567</p>
-              <p className="text-gray-700 text-lg">+1 (555) 987-6543</p>
+              <p className="text-gray-700 mb-2 text-lg">+94 77 123 4567</p>
+              <p className="text-gray-700 text-lg">+94 91 234 5678</p>
             </div>
 
             {/* Email Card */}
@@ -88,10 +90,8 @@ const ContactUs = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-900">
                 Email Us
               </h3>
-              <p className="text-gray-700 mb-2 text-lg">info@travellodge.com</p>
-              <p className="text-gray-700 text-lg">
-                reservations@travellodge.com
-              </p>
+              <p className="text-gray-700 mb-2 text-lg">info@seabreeze.lk</p>
+              <p className="text-gray-700 text-lg">reservations@seabreeze.lk</p>
             </div>
 
             {/* Location Card */}
@@ -120,8 +120,10 @@ const ContactUs = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-900">
                 Visit Us
               </h3>
-              <p className="text-gray-700 mb-2 text-lg">123 Luxury Avenue</p>
-              <p className="text-gray-700 text-lg">Paradise City, PC 12345</p>
+              <p className="text-gray-700 mb-2 text-lg">
+                Beach Road, Unawatuna
+              </p>
+              <p className="text-gray-700 text-lg">Galle, Sri Lanka</p>
             </div>
           </div>
 
@@ -130,7 +132,7 @@ const ContactUs = () => {
             {/* Contact Form */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Send Us a Message
+                Get in Touch
               </h2>
 
               <div className="space-y-6">
@@ -144,7 +146,7 @@ const ContactUs = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700"
-                    placeholder="John Doe"
+                    placeholder="Your full name"
                     required
                   />
                 </div>
@@ -160,7 +162,7 @@ const ContactUs = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700"
-                      placeholder="john@example.com"
+                      placeholder="you@example.com"
                       required
                     />
                   </div>
@@ -175,7 +177,7 @@ const ContactUs = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+94 7X XXX XXXX"
                     />
                   </div>
                 </div>
@@ -190,7 +192,7 @@ const ContactUs = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700"
-                    placeholder="How can we help you?"
+                    placeholder="Room reservation / General inquiry"
                     required
                   />
                 </div>
@@ -205,7 +207,7 @@ const ContactUs = () => {
                     onChange={handleChange}
                     rows="5"
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700 resize-none"
-                    placeholder="Tell us more about your inquiry..."
+                    placeholder="Let us know how we can assist with your beachside stay..."
                     required
                   ></textarea>
                 </div>
@@ -216,21 +218,17 @@ const ContactUs = () => {
                 >
                   Send Message
                 </button>
-
-                <p className="text-sm text-gray-600 text-center">
-                  * Required fields
-                </p>
               </div>
             </div>
 
             {/* Map Section */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg h-full">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Find Us Here
+                Our Beachside Location
               </h2>
               <div className="w-full h-[500px] bg-gray-200 rounded-xl overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798467137654!2d79.83732631477!3d6.914722995009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25913c93a7d47%3A0x3b70dfbc0d2a1b5!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.353707654183!2d80.24867307568774!3d6.020454293965956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173c6f0d7a5a1%3A0x4a9f9b3b0b9b5c3e!2sUnawatuna%20Beach!5e0!3m2!1sen!2slk!4v1700000000000"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -240,62 +238,6 @@ const ContactUs = () => {
                   title="Hotel Location Map"
                 ></iframe>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-700">
-              Quick answers to common questions
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                What are your check-in/check-out times?
-              </h3>
-              <p className="text-gray-700">
-                Check-in is from 3:00 PM and check-out is until 11:00 AM. Early
-                check-in and late check-out may be available upon request.
-              </p>
-            </div>
-
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Do you offer airport transportation?
-              </h3>
-              <p className="text-gray-700">
-                Yes! We provide complimentary airport shuttle service. Please
-                inform us of your arrival time at least 24 hours in advance.
-              </p>
-            </div>
-
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Is parking available?
-              </h3>
-              <p className="text-gray-700">
-                We offer both valet and self-parking options. Valet parking is
-                $25/day and self-parking is complimentary for all guests.
-              </p>
-            </div>
-
-            <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Are pets allowed?
-              </h3>
-              <p className="text-gray-700">
-                Yes, we are a pet-friendly hotel! We welcome dogs and cats up to
-                50 lbs with a $50 per stay pet fee.
-              </p>
             </div>
           </div>
         </div>

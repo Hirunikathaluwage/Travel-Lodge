@@ -33,7 +33,7 @@ const AboutUs = () => {
                 <div className="grid grid-cols-2 gap-8">
                   <div className="text-center">
                     <h3 className="text-4xl font-bold text-gray-900 mb-2">
-                      30,000+
+                      20,000+
                     </h3>
                     <p className="text-gray-600 text-sm">Happy Guests Served</p>
                   </div>
@@ -45,7 +45,7 @@ const AboutUs = () => {
                   </div>
                   <div className="text-center">
                     <h3 className="text-4xl font-bold text-gray-900 mb-2">
-                      150+
+                      20+
                     </h3>
                     <p className="text-gray-600 text-sm">Luxury Rooms</p>
                   </div>
