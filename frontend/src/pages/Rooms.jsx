@@ -18,8 +18,8 @@ const RoomsPage = () => {
       image:
         "https://assets.avanihotels.com/image/upload/q_auto,f_auto,c_limit,w_1045/media/minor/avani/images/kalutara/sleeping/avani-new-images/teaser-590x354/avani_deluxe_lagoon_view_room_590x354.jpg",
       shortDescription:
-        "Elegant room with stunning views of the Indian Ocean and golden sunsets",
-      price: 190,
+        "Luxury room overlooking the Indian Ocean with breathtaking sunsets",
+      price: 19000,
       availability: "Available",
       roomType: "Deluxe Room",
       size: "42 m²",
@@ -34,15 +34,15 @@ const RoomsPage = () => {
         "Mini Fridge",
       ],
       fullDescription:
-        "Wake up to the sound of waves and breathtaking ocean views. This deluxe room blends modern comfort with tropical coastal design, offering a private balcony perfect for enjoying sunsets over the Indian Ocean.",
+        "Experience coastal luxury with uninterrupted views of the Indian Ocean. This elegant deluxe room features modern interiors, soothing tropical tones, and a private balcony where you can relax and enjoy golden Sri Lankan sunsets.",
     },
     {
       id: 2,
-      name: "Garden View Beach Room",
+      name: "Beachfront Family Suite",
       image:
         "https://assets.avanihotels.com/image/upload/q_auto,f_auto,c_limit,w_1045/media/minor/avani/images/kalutara/sleeping/avani-new-images/teaser-590x354/avani_kalutara_resort_guest_room_avani_ocean_view_room_balcony-590-345.jpg",
       shortDescription:
-        "Comfortable room surrounded by lush tropical gardens near the beach",
+        "Peaceful beachside stay surrounded by lush tropical gardens",
       price: 160,
       availability: "Available",
       roomType: "Standard Room",
@@ -58,15 +58,15 @@ const RoomsPage = () => {
         "Private Terrace",
       ],
       fullDescription:
-        "Nestled among palm trees and tropical greenery, this room offers a peaceful coastal escape. Ideal for guests who enjoy nature, comfort, and easy access to the beach.",
+        "Set amidst swaying palms and tropical greenery, this garden view room offers a calm and refreshing beachside escape. Ideal for travelers who enjoy nature, comfort, and a relaxed coastal atmosphere just steps from the shore.",
     },
     {
       id: 3,
-      name: "Beachfront Family Suite",
+      name: "Garden View Beach Room",
       image:
         "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80",
       shortDescription:
-        "Spacious suite perfect for families with direct beach access",
+        "Spacious beachfront suite ideal for families and group stays",
       price: 280,
       availability: "Available",
       roomType: "Family Suite",
@@ -82,7 +82,7 @@ const RoomsPage = () => {
         "Tea & Coffee Facilities",
       ],
       fullDescription:
-        "Designed for families, this beachfront suite offers space, comfort, and stunning ocean views. Step directly onto the beach and enjoy unforgettable moments with your loved ones.",
+        "Perfect for families, this beachfront suite offers generous space, comfort, and stunning ocean views. With direct access to the beach and a separate living area, it’s designed for memorable seaside moments together.",
     },
     {
       id: 4,
@@ -90,7 +90,7 @@ const RoomsPage = () => {
       image:
         "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80",
       shortDescription:
-        "Luxury standalone villa offering privacy steps away from the ocean",
+        "Exclusive beach villa offering privacy and ocean tranquility",
       price: 320,
       availability: "Limited",
       roomType: "Villa",
@@ -106,15 +106,14 @@ const RoomsPage = () => {
         "Tea & Coffee Facilities",
       ],
       fullDescription:
-        "Perfect for couples seeking privacy and luxury, this beach villa is surrounded by tropical beauty. Enjoy peaceful mornings, ocean breezes, and romantic evenings by the shore.",
+        "This private beach villa is designed for guests seeking seclusion and luxury. Surrounded by tropical beauty and ocean breezes, it offers peaceful mornings, relaxed afternoons, and romantic evenings by the Sri Lankan coastline.",
     },
     {
       id: 5,
       name: "Budget Coastal Room",
       image:
         "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80",
-      shortDescription:
-        "Simple and comfortable room for beach-loving travelers",
+      shortDescription: "Affordable coastal stay with all essential comforts",
       price: 130,
       availability: "Available",
       roomType: "Standard Room",
@@ -129,15 +128,15 @@ const RoomsPage = () => {
         "Tea Maker",
       ],
       fullDescription:
-        "An affordable option for guests who spend their days exploring beaches, surfing, and coastal towns. Clean, comfortable, and equipped with all essential amenities.",
+        "A budget-friendly choice for beach lovers who prefer comfort and convenience. Ideal for travelers exploring Sri Lanka’s coastline, this room offers a clean, relaxing space with essential amenities after a day by the sea.",
     },
     {
       id: 6,
       name: "Honeymoon Ocean Suite",
       image:
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/781111395.jpg?k=31f6efb9e614dedd04e3ee5e9cb43f9c9163a741463ab9cdbaaa0e9f9f0a254d&o=",
       shortDescription:
-        "Romantic suite with panoramic ocean views and tropical interiors",
+        "Romantic oceanfront suite designed for unforgettable honeymoons",
       price: 290,
       availability: "Available",
       roomType: "Suite",
@@ -153,7 +152,7 @@ const RoomsPage = () => {
         "Tea & Coffee Facilities",
       ],
       fullDescription:
-        "Designed especially for honeymooners, this oceanfront suite offers breathtaking sea views, soft lighting, and a tranquil atmosphere for unforgettable romantic moments by the Sri Lankan coast.",
+        "Created especially for honeymooners, this ocean suite offers panoramic sea views, elegant interiors, and a serene atmosphere. Perfect for romantic getaways, it captures the charm and beauty of Sri Lanka’s tropical coast.",
     },
   ];
 
@@ -301,9 +300,9 @@ const RoomsPage = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-gray-700"
                 >
                   <option value="all">All Prices</option>
-                  <option value="budget">Budget (Under $200)</option>
-                  <option value="mid">Mid-range ($200-$300)</option>
-                  <option value="luxury">Luxury ($300+)</option>
+                  <option value="budget">Budget (Under Rs.20000)</option>
+                  <option value="mid">Mid-range (Rs.20000-Rs.43000)</option>
+                  <option value="luxury">Luxury (Rs.43000)</option>
                 </select>
               </div>
             </div>
