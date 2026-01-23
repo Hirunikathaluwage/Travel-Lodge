@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/Contact";
 import RoomsPage from "./pages/Rooms";
+import DiningPage from "./pages/Dinning";
 import "./App.css";
 
 function App() {
@@ -58,6 +59,15 @@ function App() {
           element={
             <MainLayout>
               <RoomsPage />
+            </MainLayout>
+          }
+        />
+
+        <Route
+          path="/Dinning"
+          element={
+            <MainLayout>
+              <DiningPage />
             </MainLayout>
           }
         />
