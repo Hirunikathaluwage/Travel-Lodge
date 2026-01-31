@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/Contact";
 import RoomsPage from "./pages/Rooms";
 import DiningPage from "./pages/Dinning";
+import Gallery from "./pages/Gallery";
 import "./App.css";
 
 function App() {
@@ -68,6 +69,15 @@ function App() {
           element={
             <MainLayout>
               <DiningPage />
+            </MainLayout>
+          }
+        />
+
+        <Route
+          path="/gallery"
+          element={
+            <MainLayout>
+              <Gallery />
             </MainLayout>
           }
         />
