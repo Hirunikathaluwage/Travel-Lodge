@@ -26,7 +26,7 @@ const Header = () => {
           </Link>
 
           <Link
-            to="/contactUs"
+            to="/gallery"
             className="text-white hover:text-indigo-300 font-medium"
           >
             Gallery
